@@ -1,0 +1,9 @@
+
+.typedText{
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(209, 14, 14);
+    /* text-align: center; */
+    margin-left:10rem;
+    /* margin-top: 10%; */
+}
