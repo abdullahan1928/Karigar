@@ -1,4 +1,0 @@
-API_PORT = 5002
-MONGO_URI = mongodb+srv://frazbhattiiii:bhatti@cluster0.kaakr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-TOKEN_KEY=hereShouldGoStrongTokenKey
