@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { getActions } from '../../store/actions/alertActions';
 
 
@@ -11,27 +11,27 @@ function AlertNotifications({
   closeAlertMessage,
   alertMessageContent
 }) {
- 
+
   return (
-  <Snackbar
-  anchorOrigin={{vertical:'bottom',horizontal:'center'}}
-  open={showAlertMessage}
-  onClose={closeAlertMessage}
-  autoHideDuration={6000} 
-  >
-    <Alert severity='info'>
-      {alertMessageContent}
-    </Alert>
-  </Snackbar>
+    <Snackbar
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      open={showAlertMessage}
+      onClose={closeAlertMessage}
+      autoHideDuration={6000}
+    >
+      <Alert severity='info'>
+        {alertMessageContent}
+      </Alert>
+    </Snackbar>
   )
 }
-const mapStateToProps=({alert})=>{
-  return{
-...alert,
+const mapStateToProps = ({ alert }) => {
+  return {
+    ...alert,
 
   }
 }
-const mapActionsToProps=(dispatch)=>{
+const mapActionsToProps = (dispatch) => {
   return {
     ...getActions(dispatch),
 
@@ -40,4 +40,4 @@ const mapActionsToProps=(dispatch)=>{
 
 }
 
-export default connect(mapStateToProps,  mapActionsToProps)(AlertNotifications);
+export default connect(mapStateToProps, mapActionsToProps)(AlertNotifications);
