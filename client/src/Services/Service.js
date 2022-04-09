@@ -16,16 +16,13 @@ import painterLogo from '../images/painterBack.png';
 import Painter from '../images/painter1.jpg';
 import More from '../images/More1.jpg';
 import moreLogo from '../images/more.png';
-
-
+import ServiceCard from '../shared/components/ServiceCard/ServiceCard';
 
 const Service = () => {
 
   return (
     <>
       <div clasName='mainContainer'>
-
-
         <Navbar additionalStyles={{
           backgroundColor: '#f8f9fa',
           marginTop: '-1rem',
@@ -33,22 +30,12 @@ const Service = () => {
         }}
           additionalLinkStyles={{
             color: 'black',
-
-
-
-
-
           }}
           additionalMenuStyles={{
-
-
             marginLeft: '63rem',
-
-
           }}
-
-
         />
+
         <Typography variant='h1' sx={{
           color: 'brown',
           fontFamily: 'Inter',
@@ -73,8 +60,6 @@ const Service = () => {
         </Typography>
 
         <div>
-
-
           <SliderManual />
           <CustomPrimaryButton label='Book Now'
             additionalStyles={{
@@ -97,115 +82,59 @@ const Service = () => {
             We provide to you the best choiches for you <br /> Providing the best services in the town with minimum cost Top rated services provider in the town.
           </p>
           <ul className="cards">
-
             <li>
-              <a href="" className="card">
-                <img src={AC} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb cardImage" src={ACbox} alt="" />
-                    <div className="card__header-text">
-                      <h3 className="card__title">AC Service</h3>
-                      <span className="card__status">Any type of service</span>
-                    </div>
-                  </div>
-                  <p className="card__description">
-                    AC Serivices which include AC repaaring cleaning and much more
-                  </p>
-                </div>
-              </a>
+              <ServiceCard
+                title="AC Service"
+                status="Any type of service"
+                description="AC Serivices which include AC repaaring cleaning and much more"
+                img={AC}
+                logo={ACbox}
+              />
             </li>
             <li>
-              <a href="" className="card">
-                <img src={Electrician} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb cardImage" src={electricianLogo} alt="" />
-                    <div className="card__header-text">
-                      <h3 className="card__title"> Electrician Services</h3>
-                      <span className="card__status">Any type of service</span>
-                    </div>
-                  </div>
-                  <p className="card__description">
-                    Electrician Services include any kind of services related to Electricity.
-                  </p>
-                </div>
-              </a>
+              <ServiceCard
+                title="Electrician Services"
+                status="Any type of service"
+                description="Electrician Services include any kind of services related to Electricity"
+                img={Electrician}
+                logo={electricianLogo}
+              />
             </li>
             <li>
-              <a href="" className="card">
-                <img src={Carpenter} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb cardImage" src={CarpenterLogo} alt="" />
-                    <div className="card__header-text">
-                      <h3 className="card__title">Carpenter Service</h3>
-                      <span className="card__status">Any type of service</span>
-                    </div>
-                  </div>
-                  <p className="card__description">
-                    Any Services related to Wood. Our top qualified Carpenters are available
-                  </p>
-                </div>
-              </a>
+              <ServiceCard
+                title="Carpenter Service"
+                status="Any type of service"
+                description="Any Services related to Wood. Our top qualified Carpenters are available"
+                img={Carpenter}
+                logo={CarpenterLogo}
+              />
             </li>
             <li>
-              <a href="" className="card">
-                <img src={Plumber} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb cardImage" src={plumberLogo} alt="" />
-                    <div className="card__header-text">
-                      <h3 className="card__title">Plumbing Service</h3>
-                      <span className="card__status">Any type of service</span>
-                    </div>
-                  </div>
-                  <p className="card__description">
-                    Any kind of taks related to plumbing will be done with full experty.
-                  </p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="" className="card">
-                <img src={Painter} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb cardImage" src={painterLogo} alt="" />
-                    <div className="card__header-text">
-                      <h3 className="card__title">Painting Service</h3>
-                      <span className="card__status">Any type of service</span>
-                    </div>
-                  </div>
-                  <p className="card__description">
-                    If you are looking for one of the finest painter of the town
-                  </p>
-                </div>
-              </a>
+              <ServiceCard
+                title="Plumbing Service"
+                status="Any type of service"
+                description="Any kind of taks related to plumbing will be done with full experty."
+                img={Plumber}
+                logo={plumberLogo}
+              />
             </li>
             <li>
-              <a href="" className="card">
-                <img src={More} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb cardImage" src={moreLogo} alt="" />
-                    <div className="card__header-text">
-                      <h3 className="card__title">More Services</h3>
-                      <span className="card__status">Many kind of services Mechanic,Washing and more...</span>
-                    </div>
-                  </div>
-                  <p className="card__description">
-                    AC Serivices which include AC repaaring cleaning and much more
-                  </p>
-                </div>
-              </a>
+              <ServiceCard
+                title="Painting Service"
+                status="Any type of service"
+                description="If you are looking for one of the finest painter of the town"
+                img={Painter}
+                logo={painterLogo}
+              />
+            </li>
+            <li>
+              <ServiceCard
+                title="More Services"
+                status="Many kind of services Mechanic,Washing and more..."
+                description="AC Serivices which include AC repaaring cleaning and much more"
+                img={More}
+                logo={moreLogo}
+              />
             </li>
           </ul>
         </div>
