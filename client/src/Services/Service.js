@@ -4,19 +4,8 @@ import Navbar from '../shared/components/Navbar/Navbar';
 import CustomPrimaryButton from '../shared/components/CustomPrimaryButton';
 import './service.css'
 import { Typography } from '@mui/material';
-import ACbox from '../images/AClogo.png'
-import AC from '../images/AC.jpg';
-import electricianLogo from '../images/electrician.png';
-import Electrician from '../images/electric.jpg';
-import Carpenter from '../images/Carpenter.jpg';
-import CarpenterLogo from '../images/wood.png';
-import plumberLogo from '../images/plumber.png';
-import Plumber from '../images/plumber.jpg';
-import painterLogo from '../images/painterBack.png';
-import Painter from '../images/painter1.jpg';
-import More from '../images/More1.jpg';
-import moreLogo from '../images/more.png';
 import ServiceCard from '../shared/components/ServiceCard/ServiceCard';
+import Servic from './allServices'
 
 const Service = () => {
 
@@ -70,8 +59,8 @@ const Service = () => {
               height: '50px',
               fontWeight: "700"
             }} />
-
         </div>
+
         <div className='serviceSection'>
 
           <h1 className='serviceTitle'>
@@ -84,56 +73,56 @@ const Service = () => {
           <ul className="cards">
             <li>
               <ServiceCard
-                title="AC Service"
-                status="Any type of service"
-                description="AC Serivices which include AC repaaring cleaning and much more"
-                img={AC}
-                logo={ACbox}
+                title={Servic[0].title}
+                status={Servic[0].status}
+                description={Servic[0].description}
+                img={Servic[0].image}
+                logo={Servic[0].logo}
               />
             </li>
             <li>
               <ServiceCard
-                title="Electrician Services"
-                status="Any type of service"
-                description="Electrician Services include any kind of services related to Electricity"
-                img={Electrician}
-                logo={electricianLogo}
+                title={Servic[1].title}
+                status={Servic[1].status}
+                description={Servic[1].description}
+                img={Servic[1].image}
+                logo={Servic[1].logo}
               />
             </li>
             <li>
               <ServiceCard
-                title="Carpenter Service"
-                status="Any type of service"
-                description="Any Services related to Wood. Our top qualified Carpenters are available"
-                img={Carpenter}
-                logo={CarpenterLogo}
+                title={Servic[2].title}
+                status={Servic[2].status}
+                description={Servic[2].description}
+                img={Servic[2].image}
+                logo={Servic[2].logo}
               />
             </li>
             <li>
               <ServiceCard
-                title="Plumbing Service"
-                status="Any type of service"
-                description="Any kind of taks related to plumbing will be done with full experty."
-                img={Plumber}
-                logo={plumberLogo}
+                title={Servic[3].title}
+                status={Servic[3].status}
+                description={Servic[3].description}
+                img={Servic[3].image}
+                logo={Servic[3].logo}
               />
             </li>
             <li>
               <ServiceCard
-                title="Painting Service"
-                status="Any type of service"
-                description="If you are looking for one of the finest painter of the town"
-                img={Painter}
-                logo={painterLogo}
+                title={Servic[4].title}
+                status={Servic[4].status}
+                description={Servic[4].description}
+                img={Servic[4].image}
+                logo={Servic[4].logo}
               />
             </li>
             <li>
               <ServiceCard
-                title="More Services"
-                status="Many kind of services Mechanic,Washing and more..."
-                description="AC Serivices which include AC repaaring cleaning and much more"
-                img={More}
-                logo={moreLogo}
+                title={Servic[5].title}
+                status={Servic[5].status}
+                description={Servic[5].description}
+                img={Servic[5].image}
+                logo={Servic[5].logo}
               />
             </li>
           </ul>
