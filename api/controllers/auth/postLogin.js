@@ -1,30 +1,30 @@
 const User = require("../../models/user");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
- 
 
-const postLogin = async (req,res)=>{
+
+const postLogin = async (req, res) => {
   try {
-    const {mail, password} = req.body;
-    const user = await User.findOne({mail:mail.toLowerCase()});
-    if(user && (await bcrypt.compare(password,user.password))){
-      const token=jwt.sign(
+    const { mail, password } = req.body;
+    const user = await User.findOne({ mail: mail.toLowerCase() });
+    if (user && (await bcrypt.compare(password, user.password))) {
+      const token = jwt.sign(
         {
-          userId:user._id,
+          userId: user._id,
           mail
-        }, 
+        },
         // here we are giving the secret key
         process.env.TOKEN_KEY,
         {
-            expiresIn:'24h'
-        } 
+          expiresIn: '24h'
+        }
       );
-    
+
       return res.status(200).send({
-        userDetails:{
-          mail:user.mail,
-          token:token,
-          username:user.username,
+        userDetails: {
+          mail: user.mail,
+          token: token,
+          username: user.username,
         }
       })
     }
