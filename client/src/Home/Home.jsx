@@ -1,13 +1,11 @@
 import React from 'react'
-
 import './home.css';
 import logo from '../images/logooo.png';
 import Hunar from '../images/KarigarLogo.png'
 import { useNavigate } from 'react-router-dom';
-
 import Navbar from '../shared/components/Navbar/Navbar';
-import { Link } from 'react-router-dom';
 import StarRating from '../shared/components/StarRating/StarRating';
+import Review from '../shared/components/Reviews/Review';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -49,6 +47,7 @@ function Dashboard() {
         </div>
       </div>
       <StarRating />
+      <Review />
     </>
 
   )

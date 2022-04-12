@@ -15,10 +15,6 @@ input[type="radio"] {
     transition: color 200ms;
 }
 
-.star:on-hover {
-    
-}
-
 .averageRating {
     margin-left: 20px;
     font-size: 1.5rem;
