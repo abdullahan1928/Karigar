@@ -1,29 +1,29 @@
 import alertActions from '../actions/alertActions'
 
-const initState={
-  showAlertMessage:false,
-  alertMessageContent:null
+const initState = {
+  showAlertMessage: false,
+  alertMessageContent: null
 };
-const reducer=(state=initState,action)=>{
-  switch(action.type){
+const reducer = (state = initState, action) => {
+  switch (action.type) {
     case alertActions.OPEN_ALERT_MESSAGE:
-      return{
+      return {
         ...state,
-        showAlertMessage:true,
-        alertMessageContent:action.content,
-        
+        showAlertMessage: true,
+        alertMessageContent: action.content,
+
 
       }
     case alertActions.CLOSE_ALERT_MESSAGE:
-      return{
+      return {
         ...state,
-        showAlertMessage:false,
-        alertMessageContent:null,
+        showAlertMessage: false,
+        alertMessageContent: null,
 
 
       }
-      default:
-        return state
+    default:
+      return state
   }
 }
 export default reducer;
