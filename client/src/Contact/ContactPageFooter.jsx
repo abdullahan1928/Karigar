@@ -18,7 +18,6 @@ export default function ContactPageFooter({ handleLogin, isFormValid }) {
       <Tooltip title={!isFormValid ? getFormValidNotMessage() : getFormValidMessage()}>
 
         <div>
-
           <CustomPrimaryButton
             label='Send'
             additionalStyles={{

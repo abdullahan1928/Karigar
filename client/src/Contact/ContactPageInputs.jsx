@@ -8,9 +8,7 @@ export default function ContactPageInputs({ mail, setMail, name, setName, messag
       <InputWithLabel value={message} setValue={setMessage} label='Message' type='text' placeholder='Enter your Message' additionalStyles={
         {
           height: '100px',
-
         }} />
-
     </>
   )
 }

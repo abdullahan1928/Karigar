@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const postRegister = async (req, res) => {
   try {
-    const { username, mail, password,name,phone } = req.body;
+    const { username, mail, password, name, phone } = req.body;
 
     // check if user exists
     const userExists = await User.exists({ mail: mail.toLowerCase() });
@@ -14,7 +14,7 @@ const postRegister = async (req, res) => {
     if (userExists) {
       return res.status(409).send("E-mail already in use.");
     }
-    if(phoneExists){
+    if (phoneExists) {
       return res.status(409).send("Phone number already in use.");
     }
 
@@ -30,19 +30,19 @@ const postRegister = async (req, res) => {
       password: encryptedPassword,
     });
 
-   const token ='JWT token'
+    const token = 'JWT token'
 
     res.status(201).json({
       userDetails: {
         mail: user.mail,
         token: token,
         username: user.username,
-        phone:user.phone,
-        name:user.name,
+        phone: user.phone,
+        name: user.name,
       },
-    }); 
+    });
   } catch (err) {
-    return res.status(500).send("Error occured. Please try again "+ err);
+    return res.status(500).send("Error occured. Please try again " + err);
   }
 };
 
