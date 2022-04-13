@@ -11,7 +11,7 @@ const Service = () => {
 
   return (
     <>
-      <div clasName='mainContainer'>
+      <div>
         <Navbar additionalStyles={{
           backgroundColor: '#f8f9fa',
           marginTop: '-1rem',
@@ -69,60 +69,23 @@ const Service = () => {
           </p>
 
           <ul className="cards">
-            <li>
-              <ServiceCard
-                title={Servic[0].title}
-                status={Servic[0].status}
-                description={Servic[0].description}
-                img={Servic[0].image}
-                logo={Servic[0].logo}
-              />
-            </li>
-            <li>
-              <ServiceCard
-                title={Servic[1].title}
-                status={Servic[1].status}
-                description={Servic[1].description}
-                img={Servic[1].image}
-                logo={Servic[1].logo}
-              />
-            </li>
-            <li>
-              <ServiceCard
-                title={Servic[2].title}
-                status={Servic[2].status}
-                description={Servic[2].description}
-                img={Servic[2].image}
-                logo={Servic[2].logo}
-              />
-            </li>
-            <li>
-              <ServiceCard
-                title={Servic[3].title}
-                status={Servic[3].status}
-                description={Servic[3].description}
-                img={Servic[3].image}
-                logo={Servic[3].logo}
-              />
-            </li>
-            <li>
-              <ServiceCard
-                title={Servic[4].title}
-                status={Servic[4].status}
-                description={Servic[4].description}
-                img={Servic[4].image}
-                logo={Servic[4].logo}
-              />
-            </li>
-            <li>
-              <ServiceCard
-                title={Servic[5].title}
-                status={Servic[5].status}
-                description={Servic[5].description}
-                img={Servic[5].image}
-                logo={Servic[5].logo}
-              />
-            </li>
+            {
+              Servic.map((obj) => {
+                return (
+                  <>
+                    <li>
+                      <ServiceCard
+                        title={obj.title}
+                        status={obj.status}
+                        description={obj.description}
+                        image={obj.image}
+                        logo={obj.logo}
+                      />
+                    </li>
+                  </>
+                )
+              })
+            }
           </ul>
         </div>
       </div>
@@ -131,3 +94,4 @@ const Service = () => {
 }
 
 export default Service
+  

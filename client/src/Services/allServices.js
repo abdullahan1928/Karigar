@@ -15,7 +15,7 @@ let Servic = [
     {
         "title": "AC Service",
         "status": "Any type of service",
-        "description": "AC Serivices which include AC repaaring cleaning and much more",
+        "description": "AC Services which include AC repaaring cleaning and much more",
         "image": AC,
         "logo": ACbox
     },
