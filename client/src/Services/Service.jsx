@@ -72,17 +72,15 @@ const Service = () => {
             {
               Servic.map((obj) => {
                 return (
-                  <>
-                    <li>
-                      <ServiceCard
-                        title={obj.title}
-                        status={obj.status}
-                        description={obj.description}
-                        image={obj.image}
-                        logo={obj.logo}
-                      />
-                    </li>
-                  </>
+                  <li>
+                    <ServiceCard
+                      title={obj.title}
+                      status={obj.status}
+                      description={obj.description}
+                      image={obj.image}
+                      logo={obj.logo}
+                    />
+                  </li>
                 )
               })
             }
@@ -94,4 +92,3 @@ const Service = () => {
 }
 
 export default Service
-  
