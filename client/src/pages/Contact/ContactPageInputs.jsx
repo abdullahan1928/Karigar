@@ -1,4 +1,4 @@
-import InputWithLabel from "../shared/components/InputWithLabel"
+import InputWithLabel from "../../shared/components/InputWithLabel"
 export default function ContactPageInputs({ mail, setMail, name, setName, message, setMessage }) {
   return (
     <>

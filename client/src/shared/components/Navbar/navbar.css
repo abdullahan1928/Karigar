@@ -1,11 +1,21 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  /* margin-left: .5rem; */
-  padding: 20px;
+  padding: 10px;
   background: #CA7D23;
   color: #fff;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+.mainNav {
+  display: flex;
+  gap: 1em;
 }
 
 .hoverText:hover {
@@ -13,50 +23,38 @@
 }
 
 .links {
-
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  /* margin-left: 1rem; */
   line-height: 40px;
   cursor: pointer;
   color: #FFFFFF;
-
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 1s ease-out;
+  font-weight: 700;
 }
 
 .links:hover {
   transition: 1s ease-out;
   font-weight: 700;
-
-
-
-
-
 }
 
-
-
-.menu {
-  display: flex;
-  gap: 1em;
-  /* font-size: 18px; */
-}
-
-.hoverEffect:hover {
+.nav-comp:hover {
   background-color: #663333;
   border-radius: 5px;
   transition: .3s ease;
-
-
 }
 
-.hoverEffect {
+.nav-comp {
   padding: 5px 14px;
 }
 
-.links {
-  transition: 1s ease-out;
-  font-weight: 700;
+.login {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+  border: 1px solid #663333;
+  border-radius: 5px;
 }

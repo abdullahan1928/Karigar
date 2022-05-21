@@ -24,7 +24,8 @@ const postLogin = async (req, res) => {
         userDetails: {
           mail: user.mail,
           token: token,
-          username: user.username,
+          name: user.name
+          // username: user.username,
         }
       })
     }

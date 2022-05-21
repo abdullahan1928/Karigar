@@ -1,11 +1,11 @@
 import React from 'react'
 import './home.css';
-import logo from '../images/logooo.png';
-import Hunar from '../images/KarigarLogo.png'
+import logo from '../../images/logooo.png';
+import Hunar from '../../images/KarigarLogo.png'
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../shared/components/Navbar/Navbar';
-import StarRating from '../shared/components/StarRating/StarRating';
-import Review from '../shared/components/Reviews/Review';
+import Navbar from '../../shared/components/Navbar/Navbar';
+import StarRating from '../../shared/components/StarRating/StarRating';
+import Review from '../../shared/components/Reviews/Review';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -24,7 +24,10 @@ function Dashboard() {
         </div>
 
         <div className="rectangleDesign">
-          <Navbar />
+          <Navbar
+            additionalHoverStylesOnLogin={{ display: 'none' }}
+            additionalCSSStylesOnLogin={{ border: 'none' }}
+          />
           <img src={logo} alt="Logo Picture" className='imageContainer' />
         </div>
 

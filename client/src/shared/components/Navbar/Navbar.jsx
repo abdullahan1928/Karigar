@@ -5,37 +5,45 @@ import { Link } from "react-router-dom";
 const Navbar = (props) => {
   return (
     <nav className="navbar" style={props.additionalStyles ? props.additionalStyles : {}}>
-
-      <ul className="nav-links" >
-        <div className="menu" style={props.additionalMenuStyles ? props.additionalMenuStyles : {}}>
-          <li style={props.additionalHoverStyles ? props.additionalHoverStyles : {}} className='hoverEffect'>
+      <div className="menu" style={props.additionalMenuStyles ? props.additionalMenuStyles : {}}>
+        <div className="mainNav">
+          <div className='nav-comp'>
             <Link to="/" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}>
               <p className='hoverText' style={props.additionalHoverStyles ? props.additionalHoverStyles : {}}>Home</p>
             </Link>
-          </li>
-          <li className='hoverEffect'>
+          </div>
+          <div className='nav-comp'>
             <Link to="/about" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}>
               <p className='hoverText' style={props.additionalHoverStyles ? props.additionalHoverStyles : {}}>About</p>
             </Link>
-          </li>
-          <li className='hoverEffect'>
+          </div>
+          <div className='nav-comp'>
             <Link to="/service" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}>
               <p className='hoverText' style={props.additionalHoverStyles ? props.additionalHoverStyles : {}}>Services</p>
 
             </Link>
-          </li>
-          <li className='hoverEffect'>
+          </div>
+          <div className='nav-comp'>
             <Link to="/contact" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}
             >
               <p className='hoverText' style={props.additionalHoverStyles ? props.additionalHoverStyles : {}}>
                 Contact
               </p>
             </Link>
-          </li>
-
+          </div>
         </div>
-      </ul>
-    </nav>
+        <div className='login' style={props.additionalCSSStylesOnLogin ? props.additionalCSSStylesOnLogin : {}} >
+          <div className='nav-comp'>
+            <Link to="/login" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}
+            >
+              <p className='hoverText' style={props.additionalHoverStylesOnLogin ? props.additionalHoverStylesOnLogin : {}}>
+                Login | SignUp
+              </p>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav >
   )
 }
 

@@ -10,7 +10,7 @@ const auth = require('../middleware/auth');
 
 
 const registerSchema = Joi.object({
-   username: Joi.string().min(3).max(12).required(),
+   // username: Joi.string().min(3).max(12).required(),
    name: Joi.string().min(3).max(30).required(),
    phone: myCustomJoi.string().phoneNumber({ defaultCountry: 'PK', format: 'e164' }).required(),
    password: Joi.string().min(6).max(12).required(),
