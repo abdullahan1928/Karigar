@@ -16,12 +16,13 @@ const RegisterPage = ({ register }) => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
+  // const [username, setUsername] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
   useEffect(() => {
     setIsFormValid(validateRegisterForm({
       mail,
-      username, password, name, phone
+      // username, 
+      password, name, phone
     }));
   }, [mail, password, phone, name, setIsFormValid])
 
@@ -29,7 +30,7 @@ const RegisterPage = ({ register }) => {
     const userDetails = {
       name,
       phone,
-      username,
+      // username,
       mail,
       password,
     }
@@ -60,8 +61,8 @@ const RegisterPage = ({ register }) => {
         mail={mail}
         setMail={setMail}
 
-        username={username}
-        setUsername={setUsername}
+        // username={username}
+        // setUsername={setUsername}
 
         password={password}
         setPassword={setPassword}

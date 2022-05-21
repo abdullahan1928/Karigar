@@ -4,7 +4,9 @@ const jwt = require("jsonwebtoken");
 
 const postRegister = async (req, res) => {
   try {
-    const { username, mail, password, name, phone } = req.body;
+    const { 
+      // username, 
+      mail, password, name, phone } = req.body;
 
     // check if user exists
     const userExists = await User.exists({ mail: mail.toLowerCase() });
@@ -23,10 +25,10 @@ const postRegister = async (req, res) => {
 
     // create user document and save in database
     const user = await User.create({
-      username,
+      // username,
       mail: mail.toLowerCase(),
       phone,
-      name: name.toLowerCase(),
+      name: name,
       password: encryptedPassword,
     });
 
@@ -36,7 +38,7 @@ const postRegister = async (req, res) => {
       userDetails: {
         mail: user.mail,
         token: token,
-        username: user.username,
+        // username: user.username,
         phone: user.phone,
         name: user.name,
       },

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
-import AuthBox from '../shared/components/AuthBox';
+import AuthBox from '../../shared/components/AuthBox';
 import ContactPageFooter from './ContactPageFooter';
 import ContactPageHeader from './ContactPageHeader';
 import ContactPageInputs from './ContactPageInputs';
-import { validateContactForm } from '../shared/utils/validators';
+import { validateContactForm } from '../../shared/utils/validators';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import contact from '../images/customer.jpg';
+import contact from '../../images/customer.jpg';
 
 const Contact = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomPrimaryButton from '../shared/components/CustomPrimaryButton';
+import CustomPrimaryButton from '../../shared/components/CustomPrimaryButton';
 import { useNavigate } from "react-router-dom";
 import { Tooltip } from '@mui/material';
 const getFormValidNotMessage = () => {

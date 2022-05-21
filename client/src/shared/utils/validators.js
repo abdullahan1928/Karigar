@@ -12,8 +12,12 @@ export const validateContactForm = ({ name, mail }) => {
   return isMailValid && isName;
 }
 
-export const validateRegisterForm = ({ mail, username, password, name, phone }) => {
-  return validateMail(mail) && validatePassword(password) && validateUsername(username) &&
+export const validateRegisterForm = ({ mail,
+  // username, 
+  password, name, phone }) => {
+  return validateMail(mail) && validatePassword(password)
+    // && validateUsername(username) 
+    &&
     validatePhone(phone) &&
     validateName(name);
 }
@@ -39,9 +43,9 @@ const validatePhone = (phone) => {
 const validatePassword = (password) => {
   return password.length >= 6 && password.length < 12;
 }
-const validateUsername = (username) => {
-  return username.length >= 3 && username.length < 12;
-}
+// const validateUsername = (username) => {
+//   return username.length >= 3 && username.length < 12;
+// }
 const validateName = (name) => {
   return name.length >= 3 && name.length < 20;
 }

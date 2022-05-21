@@ -1,16 +1,16 @@
 import React from 'react'
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
-import Home from '../images/home.jpeg';
-import Logo from '../images/logooo.png';
-import homeServices from '../images/homeServices.jpg';
-import plumber from '../images/plumbing.jpg';
-import Electric from '../images/electricain.jpg';
-import plumberHome from '../images/plumberHome.jpg';
-import Mechanic from '../images/Mechanic.jpg';
-import aboutUs from '../images/about.png';
-import Navbar from '../shared/components/Navbar/Navbar';
+import Home from '../../images/home.jpeg';
+import Logo from '../../images/logooo.png';
+import homeServices from '../../images/homeServices.jpg';
+import plumber from '../../images/plumbing.jpg';
+import Electric from '../../images/electricain.jpg';
+import plumberHome from '../../images/plumberHome.jpg';
+import Mechanic from '../../images/Mechanic.jpg';
+import aboutUs from '../../images/about.png';
+import Navbar from '../../shared/components/Navbar/Navbar';
 import Typed from 'react-typed';
-import CustomPrimaryButton from '../shared/components/CustomPrimaryButton';
+import CustomPrimaryButton from '../../shared/components/CustomPrimaryButton';
 import { useNavigate } from 'react-router-dom';
 import './About.css';
 
