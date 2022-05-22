@@ -109,6 +109,24 @@ h2 {
 }
 
 .row2-container:hover{
-    background-color: var(--orange);
+    background-color: #cc7000;
+
     color: white;
 }
+
+
+
+
+.react-switch {
+    vertical-align: middle;
+    float: right;
+    margin: 20px
+
+
+  }
+
+.status-price  {
+    width: 100px;
+    float: left;
+}
+        

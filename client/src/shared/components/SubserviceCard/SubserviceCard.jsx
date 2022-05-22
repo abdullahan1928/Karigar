@@ -1,26 +1,46 @@
 import React from 'react'
 import './SubserviceCard.css'
-import { Link } from "react-router-dom";
-
+import Switch from "react-switch";
+import { useState } from 'react';
 
 const ServiceCard = (props) => {
-    return (
-        <>
-            <div>
-                <Link to="/">
+
+
+        const [checked, setChecked] = useState(false);
+        const handleChange = nextChecked => {
+            setChecked(nextChecked);
+        };
+        return (
+            <>
+                <div>
                     <div className="row2-container">
                         <div className="box orange">
                             <div className='sub-image'><img src={props.logo} alt="" /></div>
                             <h2>{props.title}</h2>
                             <p>{props.description}</p>
+                            <div className='status-price'>
                             <h3>{props.status}</h3>
                             <h2>{props.price}</h2>
+                            </div>
+
+
+                            <div>
+                                    <Switch
+                                        onChange={handleChange}
+                                        checked={checked}
+                                        className="react-switch"
+                                        onColor="#FFA500"
+                                        onHandleColor="#c8730a"
+                                    />
+                            </div>
+
+
                         </div>
                     </div>
-                </Link>
-            </div>
-        </>
-    )
-}
+                </div>
+            </>
+        )
+    
 
+}
 export default ServiceCard

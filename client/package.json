@@ -29,6 +29,7 @@
     "react-scroll-motion": "^0.2.6",
     "react-simple-image-slider": "^2.4.1",
     "react-slick": "^0.28.1",
+    "react-switch": "^6.0.0",
     "react-typed": "^1.2.0",
     "redux-devtools-extension": "^2.13.9",
     "sass": "^1.52.1",
