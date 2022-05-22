@@ -30,6 +30,8 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="profile" element={<Profile inputs={userInputs} title="Profile" />} />
         </Route>
+
+
       </Routes>
       <AlertNotifications />
     </Router>
