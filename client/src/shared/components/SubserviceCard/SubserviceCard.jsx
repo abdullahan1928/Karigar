@@ -10,9 +10,11 @@ const ServiceCard = (props) => {
                 <Link to="/">
                     <div className="row2-container">
                         <div className="box orange">
+                            <div className='sub-image'><img src={props.logo} alt="" /></div>
                             <h2>{props.title}</h2>
                             <p>{props.description}</p>
-                            <img src={props.logo} alt="" />
+                            <h3>{props.status}</h3>
+                            <h2>{props.price}</h2>
                         </div>
                     </div>
                 </Link>

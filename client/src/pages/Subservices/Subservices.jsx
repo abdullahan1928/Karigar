@@ -3,7 +3,7 @@ import Navbar from '../../shared/components/Navbar/Navbar';
 import './Subservices.css'
 import SubserviceCard from '../../shared/components/SubserviceCard/SubserviceCard';
 import SubServic from './allSubServices'
-import ServiceCard from '../../shared/components/SubserviceCard/SubserviceCard';
+
 
 const SubServices = () => {
   let servId = localStorage.getItem('service')
@@ -29,6 +29,8 @@ const SubServices = () => {
                         title={obj.title}
                         description={obj.description}
                         logo={obj.logo}
+                        status={obj.status}
+                        price={obj.price}
                       />
                     </li>
                   )

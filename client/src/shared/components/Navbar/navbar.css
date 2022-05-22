@@ -4,6 +4,9 @@
   padding: 10px;
   background: #CA7D23;
   color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .menu {
