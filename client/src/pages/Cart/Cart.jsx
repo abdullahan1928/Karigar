@@ -6,7 +6,15 @@ export default function Cart(props) {
         <h2>Cart Items</h2>
         <div>
         {cartItems.length === 0 && <div>Cart is empty</div>}
+
+        {cartItems.map((item) => (
+          <div key={item.id} className="row">
+            <div className="col-2">{item.name}</div>
+
+          </div>
+        ))}
         </div>
+        
         </>
     );
 

@@ -9,6 +9,7 @@ const ServiceCard = (props) => {
         const [checked, setChecked] = useState(false);
         const handleChange = nextChecked => {
             setChecked(nextChecked);
+            props.onAdd(props.product);
         };
         return (
             <>

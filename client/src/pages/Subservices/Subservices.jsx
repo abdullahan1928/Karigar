@@ -10,6 +10,19 @@ import { useState } from 'react';
 const SubServices = () => {
   let servId = localStorage.getItem('service')
   const [cartItems, setCartItems] = useState([]);
+
+
+ 
+
+
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
+
+
   return (
     <>
       <div>
@@ -30,11 +43,13 @@ const SubServices = () => {
                   return (
                     <li>
                       <SubserviceCard
+                        key={obj.id}
                         title={obj.title}
                         description={obj.description}
                         logo={obj.logo}
                         status={obj.status}
                         price={obj.price}
+                        onAdd={onAdd}
                       />
                     </li>
 
