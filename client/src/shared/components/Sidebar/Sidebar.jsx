@@ -42,14 +42,18 @@ export const Sidebar = () => {
                         <Inventory2Icon className="icon" />
                         <span className="dash-items-text">Products</span>
                     </li>
+                    <Link to="/dashboard/previousorders">
                     <li className="icons-list-item">
                         <FeaturedPlayListIcon className="icon" />
                         <span className="dash-items-text">Previous Orders</span>
                     </li>
+                    </Link>
+                    <Link to="/dashboard/ordersinqueue">
                     <li className="icons-list-item">
                         <LocalShippingIcon className="icon" />
                         <span className="dash-items-text">Orders In Queue</span>
                     </li>
+                    </Link>
                     <p className="title">SYSTEM</p>
                     <li className="icons-list-item">
                         <AnalyticsIcon className="icon" />

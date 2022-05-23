@@ -11,7 +11,7 @@ const Dashboard = () => {
             <Sidebar />
             <div className="dashContainer">
                 <Navbar />
-Hello
+                Hello
             </div>
         </div>
         // </Link>
