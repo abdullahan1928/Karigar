@@ -34,7 +34,7 @@ const Service = () => {
           <p className='serviceDescription'>
             We provide to you the best choiches for you <br /> Providing the best services in the town with minimum cost Top rated services provider in the town.
           </p>
-          <ul className="cards">
+          <ul className="serviceCards">
             {
               Servic.map((obj) => {
                 return (

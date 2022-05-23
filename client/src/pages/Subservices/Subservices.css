@@ -3,15 +3,17 @@
     --curve: 40;
   }
   
-  .serviceSection {
+  .subServiceSection {
     margin-top: 2rem;
     height: 100vh;
     scroll-behavior: smooth;
     width: auto;
   
   
-    width: 100%;
+    width: 75%;
     height: 100vh;
+    float: left;
+    flex: 2;
   
     /* Scroll Snap */
     scroll-snap-align: center;
@@ -56,8 +58,21 @@
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10rem;
-    margin: 4rem 4rem 2rem 2rem;
+    gap: 5rem;
+    margin: 5px 15px 5px 5px;
     padding: 0;
     list-style-type: none;
+  }
+
+  .cartSection{
+    float: right;
+    background-color: #e0e0e0;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    /* flex: 1; */
+    top: 0;
+    width: 350px;
+    height: 500px;
+    margin: 30px 50px 0px 0px;
   }

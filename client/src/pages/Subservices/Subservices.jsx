@@ -3,22 +3,25 @@ import Navbar from '../../shared/components/Navbar/Navbar';
 import './Subservices.css'
 import SubserviceCard from '../../shared/components/SubserviceCard/SubserviceCard';
 import SubServic from './allSubServices'
-
+import Cart from '../Cart/Cart';
+import { useState } from 'react';
 
 
 const SubServices = () => {
   let servId = localStorage.getItem('service')
+  const [cartItems, setCartItems] = useState([]);
   return (
     <>
       <div>
         <Navbar />
-        <div className='serviceSection'>
-
-          <h1 className='serviceTitle'>Our Services</h1>
+        <h1 className='serviceTitle'>Our Services</h1>
           <div className="line-5"></div>
           <p className='serviceDescription'>
             We provide to you the best choiches for you <br /> Providing the best services in the town with minimum cost Top rated services provider in the town.
           </p>
+        <div className='subServiceSection'>
+
+
 
           <ul className="cards">
             {
@@ -34,12 +37,19 @@ const SubServices = () => {
                         price={obj.price}
                       />
                     </li>
+
                   )
                 }
               })
             }
           </ul>
-        </div>
+
+          </div>
+          <div className='cartSection'>
+            <Cart
+              cartItems={cartItems}
+            />
+          </div>
       </div>
     </>
   )
