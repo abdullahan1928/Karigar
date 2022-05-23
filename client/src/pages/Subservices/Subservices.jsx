@@ -4,7 +4,7 @@ import './Subservices.css'
 import SubserviceCard from '../../shared/components/SubserviceCard/SubserviceCard';
 import SubServic from './allSubServices'
 import Cart from '../../shared/components/Cart/Cart';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const SubServices = () => {
@@ -12,21 +12,27 @@ const SubServices = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
+  useEffect(() => [...cartItems]);
+
+  const addToCart = (newSubService) => {
+    setCartItems([...cartItems, newSubService]);
+  };
+
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x === product);
+    console.log(exist);
     if (!exist) {
-      cartItems.push(product)
-      setCartItems(cartItems);
+      addToCart(product);
       console.log(cartItems)
     }
     else {
+      let hardCopy = cartItems;
       let ind = cartItems.indexOf(product);
-      cartItems.splice(ind, 1)
-      setCartItems(cartItems);
+      hardCopy = cartItems.splice(ind, 1)
+      setCartItems(hardCopy);
       console.log(cartItems)
     }
   };
-
 
   return (
     <>
