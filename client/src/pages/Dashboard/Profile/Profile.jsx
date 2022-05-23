@@ -1,5 +1,6 @@
-import Sidebar from "../../shared/components/Sidebar/Sidebar";
-import Navbar from "../../shared/components/Navbar/Navbar";
+import Sidebar from "../../../shared/components/Sidebar/Sidebar";
+import Navbar from "../../../shared/components/Navbar/Navbar";
+import DashboardTitle from "../../../shared/components/DashboardTitle/DashboardTitle";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 import './Profile.css'
@@ -11,9 +12,10 @@ export const New = ({ inputs, title }) => {
             <Sidebar />
             <div className="profileContainer">
                 <Navbar />
-                <div className="profile-top">
+                {/* <div className="profile-top">
                     <h1 className="profile-title">{title}</h1>
-                </div>
+                </div> */}
+                <DashboardTitle title="Profile" />
                 <div className="profile-bottom">
                     <div className="profile-left">
                         <img

@@ -11,23 +11,11 @@
     --weight3: 600;
 }
 
-/* body {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--veryLightGray);
-} */
 
-/* .attribution { 
-    font-size: 11px; text-align: center; 
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-} */
 
 /* h1:first-of-type {
     font-weight: var(--weight1);
     color: var(--varyDarkBlue);
-
 } */
 
 /* h1:last-of-type {
@@ -44,30 +32,42 @@
 
 
 .box p {
-    color: var(--grayishBlue);
-
-    
+    width: 250px;
+    height: 70px;
+    margin-bottom: 8px;
 }
+
+
+
+/* .box h2:hover{
+    color: var(--veryLightGray);
+}
+.box p:hover{
+    color: var(--veryLightGray);
+} */
 
 .box {
     border-radius: 5px;
     box-shadow: 0px 30px 40px -20px var(--grayishBlue);
     padding: 30px;
-    /* margin-top: 20px;   */
-    /* box-sizing: content-box; */
     width: 400px;
     height: 200px;
 
-
-    /* height: 100px */
-    
-    
 }
 
 img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 5px;
+}
+
+.sub-image {
+    justify-content: center;
     float: right;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
 }
 
 @media (max-width: 450px) {
@@ -89,24 +89,40 @@ img {
 }
 
 h2 {
-    color: var(--varyDarkBlue);
+    /* color: var(--varyDarkBlue); */
     font-weight: var(--weight3);
 }
 
 
 @media (min-width: 950px) {
 
-    
+
     .row2-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* .box {
-        width: 20%;
-     
-    } */
 
-    
+}
+
+.row2-container:hover {
+    background-color: #cc7000;
+
+    color: white;
+}
+
+.react-switch {
+    vertical-align: middle;
+    float: right;
+    margin: 20px
+}
+
+.status-price {
+    width: 100px;
+    float: left;
+}
+
+.row2-container {
+    margin: 0px;
 }

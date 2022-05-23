@@ -10,8 +10,10 @@ import RegisterPage from './authPages/RegisterPage/RegisterPage';
 import LoginPage from './authPages/LoginPage/LoginPage';
 import Dashboard from './pages/Dashboard/Dashboard';
 import SubService from './pages/Subservices/Subservices'
-import Profile from './pages/Profile/Profile';
+import Profile from './pages/Dashboard/Profile/Profile';
 import { userInputs } from './formSource';
+import PreviousOrders from './pages/Dashboard/PreviousOrders/PreviousOrders';
+import OrdersInQueue from './pages/Dashboard/OrdersInQueue/OrdersInQueue';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/dashboard" >
           <Route index element={<Dashboard />} />
           <Route path="profile" element={<Profile inputs={userInputs} title="Profile" />} />
+          <Route path="previousorders" element={<PreviousOrders />} />
+          <Route path="ordersinqueue" element={<OrdersInQueue />} />
         </Route>
       </Routes>
       <AlertNotifications />
