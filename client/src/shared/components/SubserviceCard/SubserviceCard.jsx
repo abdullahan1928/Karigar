@@ -2,16 +2,15 @@ import React from 'react'
 import './SubserviceCard.css'
 import Switch from "react-switch";
 import { useState } from 'react';
+import Cart from '../Cart/Cart'
 
-const ServiceCard = (props) => {
+const SubserviceCard = (props) => {
     const [checked, setChecked] = useState(false);
     const handleChange = nextChecked => {
         setChecked(nextChecked);
-        props.onAdd(props.title);
-        props.onAdd(props.description);
-        // console.log(props.title)
+        props.onAdd(props);
     };
-    
+
     return (
         <>
             <div>
@@ -30,7 +29,6 @@ const ServiceCard = (props) => {
                             <Switch
                                 onChange={handleChange}
                                 checked={checked}
-                                value={checked}
                                 className="react-switch"
                                 onColor="#FFA500"
                                 onHandleColor="#c8730a"
@@ -46,4 +44,4 @@ const ServiceCard = (props) => {
 
 
 }
-export default ServiceCard
+export default SubserviceCard

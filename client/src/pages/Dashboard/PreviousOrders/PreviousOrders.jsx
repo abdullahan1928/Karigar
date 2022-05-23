@@ -26,7 +26,6 @@ const PreviousOrders = () => {
                             <p className="order-sub-service">
                                 AC Installation
                             </p>
-                            {/* <hr /> */}
                             <p className="address">
                                 Address : Street 39, G-11/2, Islamabad
                             </p>

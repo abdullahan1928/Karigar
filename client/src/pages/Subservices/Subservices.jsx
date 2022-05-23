@@ -3,7 +3,7 @@ import Navbar from '../../shared/components/Navbar/Navbar';
 import './Subservices.css'
 import SubserviceCard from '../../shared/components/SubserviceCard/SubserviceCard';
 import SubServic from './allSubServices'
-import Cart from '../Cart/Cart';
+import Cart from '../../shared/components/Cart/Cart';
 import { useState } from 'react';
 
 
@@ -12,12 +12,18 @@ const SubServices = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  function onAdd(product) {
-    const exist = cartItems.find((x) => x.id === product.id);
-    console.log(product)
-    if (exist) {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
-      console.log(product.title)
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x === product);
+    if (!exist) {
+      cartItems.push(product)
+      setCartItems(cartItems);
+      console.log(cartItems)
+    }
+    else {
+      let ind = cartItems.indexOf(product);
+      cartItems.splice(ind, 1)
+      setCartItems(cartItems);
+      console.log(cartItems)
     }
   };
 
@@ -33,16 +39,14 @@ const SubServices = () => {
         </p>
         <div className='subServiceSection'>
 
-
-
           <ul className="sub-cards">
             {
               SubServic.map((obj) => {
                 if (servId === obj.id) {
                   return (
-                    <li>
+                    <li key={obj.subId}>
                       <SubserviceCard
-                        key={obj.id}
+                        id={obj.subId}
                         title={obj.title}
                         description={obj.description}
                         logo={obj.logo}
@@ -51,7 +55,6 @@ const SubServices = () => {
                         onAdd={onAdd}
                       />
                     </li>
-
                   )
                 }
               })
@@ -61,6 +64,7 @@ const SubServices = () => {
         </div>
         <div className='cartSection'>
           <Cart
+            key={cartItems.id}
             cartItems={cartItems}
           />
         </div>
