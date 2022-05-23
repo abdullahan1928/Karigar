@@ -13,7 +13,6 @@ export default function Cart({ cartItems }) {
                         {item.id}
                         <div className="col-2">{item.title}</div>
                         <div className="col-2">{item.description}</div>
-                        <div className="col-2">{item.price}</div>
                     </li>
                 )}
             </div>

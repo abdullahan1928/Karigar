@@ -2,7 +2,6 @@ import React from 'react'
 import './SubserviceCard.css'
 import Switch from "react-switch";
 import { useState } from 'react';
-import Cart from '../Cart/Cart'
 
 const SubserviceCard = (props) => {
     const [checked, setChecked] = useState(false);
