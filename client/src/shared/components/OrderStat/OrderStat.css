@@ -1,0 +1,71 @@
+.order {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px #CA7D23;
+    padding: 10px;
+    margin: 20px;
+}
+
+.row-1 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.order-id {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+
+.order-date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #CA7D23;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.order-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(184, 20, 20);
+    border-bottom: 6px solid rgb(17, 91, 160);
+    border-spacing: 0;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.sub-ser {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.order-sub-service {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.payment {
+    font-size: 24px;
+    font-weight: bold;
+    color: #CA7D23;
+    margin-right: 10px;
+}
+
+.address {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

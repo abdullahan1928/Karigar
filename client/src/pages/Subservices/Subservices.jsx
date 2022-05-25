@@ -12,26 +12,17 @@ const SubServices = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  useEffect(() => [...cartItems]);
-
-  const addToCart = (newSubService) => {
-    setCartItems([...cartItems, newSubService]);
+  const onAdd = (product) => {
+    let exist = cartItems.find((x) => x.id === product.id);
+    console.log(exist)
+    if (!exist) {
+      setCartItems([...cartItems, product])
+    }
   };
 
-  const onAdd = (product) => {
-    const exist = cartItems.find((x) => x === product);
-    console.log(exist);
-    if (!exist) {
-      addToCart(product);
-      console.log(cartItems)
-    }
-    else {
-      let hardCopy = cartItems;
-      let ind = cartItems.indexOf(product);
-      hardCopy = cartItems.splice(ind, 1)
-      setCartItems(hardCopy);
-      console.log(cartItems)
-    }
+  const onRemove = (product) => {
+    setCartItems(cartItems.filter((x) => x.id !== product.id));
+    console.log("on remove is running here")
   };
 
   return (
@@ -44,7 +35,7 @@ const SubServices = () => {
           We provide to you the best choiches for you <br /> Providing the best services in the town with minimum cost Top rated services provider in the town.
         </p>
         <div className='subServiceSection'>
-
+          {/* {cartItems.toString} */}
           <ul className="sub-cards">
             {
               SubServic.map((obj) => {
@@ -59,6 +50,7 @@ const SubServices = () => {
                         status={obj.status}
                         price={obj.price}
                         onAdd={onAdd}
+                        onRemove={onRemove}
                       />
                     </li>
                   )
@@ -70,7 +62,7 @@ const SubServices = () => {
         </div>
         <div className='cartSection'>
           <Cart
-            key={cartItems.id}
+            key={cartItems.map((item) => { return item.id })}
             cartItems={cartItems}
           />
         </div>

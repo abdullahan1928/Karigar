@@ -18,7 +18,7 @@ let SubServic = [
         "title": "AC General Service",
         "status": "Fixed price",
         "price": "Rs. 1000",
-        "description": "AC Services which include AC repaaring cleaning and much more",
+        "description": "AC Services which include AC reparing cleaning and much more",
         "image": AC,
         "logo": ACbox
     },
