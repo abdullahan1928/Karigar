@@ -7,7 +7,7 @@ const SubserviceCard = (props) => {
     const [checked, setChecked] = useState(false);
     const handleChange = nextChecked => {
         setChecked(nextChecked);
-        props.onAdd(props);
+        nextChecked ? props.onAdd(props) : props.onRemove(props);
     };
 
     return (
@@ -16,10 +16,10 @@ const SubserviceCard = (props) => {
                 <div className="row2-container">
                     <div className="box orange">
                         <div className='sub-image'><img src={props.logo} alt="" /></div>
-                        <h2>{props.title}</h2>
-                        <p>{props.description}</p>
+                        <h2 className='sub-title'>{props.title}</h2>
+                        <p className='sub-desc'>{props.description}</p>
                         <div className='status-price'>
-                            <h3>{props.status}</h3>
+                            <h3 className='status-name'>{props.status}</h3>
                             <h2 className='price'>{props.price}</h2>
                         </div>
 
