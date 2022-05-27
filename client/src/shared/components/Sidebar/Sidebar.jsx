@@ -33,44 +33,22 @@ export const Sidebar = () => {
                             <span className="dash-items-text">Dashboard</span>
                         </li>
                     </Link>
+
+                    <hr />
                     <p className="title">SERVICES</p>
-                    <li className="icons-list-item">
-                        <PersonIcon className="icon" />
-                        <span className="dash-items-text">Users</span>
-                    </li>
-                    <li className="icons-list-item">
-                        <Inventory2Icon className="icon" />
-                        <span className="dash-items-text">Products</span>
-                    </li>
                     <Link to="/dashboard/previousorders">
-                    <li className="icons-list-item">
-                        <FeaturedPlayListIcon className="icon" />
-                        <span className="dash-items-text">Previous Orders</span>
-                    </li>
+                        <li className="icons-list-item">
+                            <FeaturedPlayListIcon className="icon" />
+                            <span className="dash-items-text">Previous Orders</span>
+                        </li>
                     </Link>
                     <Link to="/dashboard/ordersinqueue">
-                    <li className="icons-list-item">
-                        <LocalShippingIcon className="icon" />
-                        <span className="dash-items-text">Orders In Queue</span>
-                    </li>
+                        <li className="icons-list-item">
+                            <LocalShippingIcon className="icon" />
+                            <span className="dash-items-text">Orders In Queue</span>
+                        </li>
                     </Link>
-                    <p className="title">SYSTEM</p>
-                    <li className="icons-list-item">
-                        <AnalyticsIcon className="icon" />
-                        <span className="dash-items-text">Stats</span>
-                    </li>
-                    <li className="icons-list-item">
-                        <NotificationsIcon className="icon" />
-                        <span className="dash-items-text">Notifications</span>
-                    </li>
-                    <li className="icons-list-item">
-                        <LocalHospitalIcon className="icon" />
-                        <span className="dash-items-text">System Health</span>
-                    </li>
-                    <li className="icons-list-item">
-                        <PsychologyIcon className="icon" />
-                        <span className="dash-items-text">Logs</span>
-                    </li>
+                    <hr />
                     <p className="title">USER</p>
                     <li className="icons-list-item">
                         <SettingsIcon className="icon" />
