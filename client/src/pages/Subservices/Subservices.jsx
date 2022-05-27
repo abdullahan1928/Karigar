@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../../shared/components/Navbar/Navbar';
 import './Subservices.css'
 import SubserviceCard from '../../shared/components/SubserviceCard/SubserviceCard';
 import SubServic from './allSubServices'
 import Cart from '../../shared/components/Cart/Cart';
-import { useState, useEffect } from 'react';
-
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
+import { CartCont } from '../../Context/CartContext';
 
 const SubServices = () => {
   let servId = localStorage.getItem('service')
 
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, setCartItems } = useContext(CartCont);
+
+  const navigate = useNavigate();
+
 
   const onAdd = (product) => {
     let exist = cartItems.find((x) => x.id === product.id);
-    console.log(exist)
     if (!exist) {
       setCartItems([...cartItems, product])
     }
@@ -22,7 +25,6 @@ const SubServices = () => {
 
   const onRemove = (product) => {
     setCartItems(cartItems.filter((x) => x.id !== product.id));
-    console.log("on remove is running here")
   };
 
   return (
@@ -35,7 +37,6 @@ const SubServices = () => {
           We provide to you the best choiches for you <br /> Providing the best services in the town with minimum cost Top rated services provider in the town.
         </p>
         <div className='subServiceSection'>
-          {/* {cartItems.toString} */}
           <ul className="sub-cards">
             {
               SubServic.map((obj) => {
@@ -60,11 +61,32 @@ const SubServices = () => {
           </ul>
 
         </div>
-        <div className='cartSection'>
-          <Cart
-            key={cartItems.map((item) => { return item.id })}
-            cartItems={cartItems}
-          />
+        <div className='cart-btn-container'>
+          <div className='cartSection'>
+            <Cart
+              key={cartItems.id}
+              cartItems={cartItems}
+            />
+          </div>
+
+
+          {localStorage.setItem('subServices', cartItems[0])}
+
+          <div >{cartItems.length !== 0 &&
+            <div className='btn proceed'>
+              <Link to="checkout">
+                <button
+                  className='text proceed-btn'
+                // onClick={() => navigate('checkout', { state: { id: 7, color: 'green' } })}
+                >
+                  Proceed to Order
+                </button>
+              </Link>
+            </div>
+
+          }</div>
+
+
         </div>
       </div>
     </>

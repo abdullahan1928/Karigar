@@ -39,11 +39,11 @@ const Service = () => {
               Servic.map((obj) => {
                 return (
                   <li>
-                    <Link to={{ pathname: `/service/${obj.title}` }}
+                    <Link to={{ pathname: `${obj.title}` }}
                       onClick={(() => {
                         localStorage.setItem('service', obj.id)
                       })}
-                      >
+                    >
                       <ServiceCard
                         title={obj.title}
                         status={obj.status}

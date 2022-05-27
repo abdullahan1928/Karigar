@@ -1,0 +1,52 @@
+.checkoutContainer {
+    width: 80%;
+    float: right;
+    margin: 15px;
+    width: 500px
+}
+
+.checkoutTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: black;
+    font-family: Poppins;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.checkoutDescription {
+    color: black;
+    font-family: Poppins;
+    margin-left: 4rem;
+    text-align: center;
+}
+
+.yourCartItems {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    /* margin-left: 1.5rem; */
+}
+
+
+.cartTable {
+    display: flex;
+    margin-top: 0.5rem;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px #CA7D23;
+    padding: 10px;
+}
+
+.tableHeading {
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    width: 250px;
+    font-weight: bold;
+}
+
+.formContainer {
+    margin: 3rem;
+    width: 60rem;
+    float: left;
+}

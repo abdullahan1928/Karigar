@@ -7,7 +7,6 @@
     flex: 6;
 }
 
-/* .profile-top, */
 .profile-bottom {
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px #CA7D23;
@@ -15,11 +14,6 @@
     margin: 20px;
     display: flex;
 }
-
-/* .profile-title {
-    color: lightgray;
-    font-size: 20px;
-} */
 
 .profile-left {
     flex: 1;
@@ -57,7 +51,6 @@ label {
 
 .icon {
     cursor: pointer;
-
 }
 
 input {

@@ -5,16 +5,13 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { useState } from "react";
 import './Profile.css'
 
-export const New = ({ inputs, title }) => {
+export const Profile = ({ inputs }) => {
     const [file, setFile] = useState("");
     return (
         <div className="profile">
             <Sidebar />
             <div className="profileContainer">
                 <Navbar />
-                {/* <div className="profile-top">
-                    <h1 className="profile-title">{title}</h1>
-                </div> */}
                 <DashboardTitle title="Profile" />
                 <div className="profile-bottom">
                     <div className="profile-left">
@@ -58,4 +55,4 @@ export const New = ({ inputs, title }) => {
     );
 };
 
-export default New;
+export default Profile;
