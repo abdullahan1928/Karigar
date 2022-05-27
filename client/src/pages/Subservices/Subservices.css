@@ -64,6 +64,16 @@
   list-style-type: none;
 }
 
+.cart-btn-container {
+  margin-left: 82rem;
+
+  top: 0;
+  margin-top: 5rem;
+  bottom: 0;
+  position: fixed;
+
+}
+
 .cartSection {
   float: right;
   background-color: #e0e0e0;
@@ -73,6 +83,14 @@
   /* flex: 1; */
   top: 0;
   width: 350px;
-  height: 500px;
+  height: 600px;
   /* margin: 30px 50px 0px 0px; */
+}
+
+.proceed {
+  text-align: center;
+  border: none;
+  width: 350px;
+  top: 0px;
+  margin-left: 0.2rem;
 }
