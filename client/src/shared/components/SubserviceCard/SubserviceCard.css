@@ -1,0 +1,98 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+.row2-container {
+    margin: 0px;
+}
+
+.row2-container:hover {
+    background-color: #cc7000;
+    color: white;
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    width: 400px;
+    height: 250px;
+}
+
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+.sub-image {
+    justify-content: center;
+    float: right;
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 5px;
+}
+
+.sub-title {
+    font-weight: var(--weight3);
+}
+
+.sub-desc {
+    width: 250px;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.status-price {
+    float: left;
+    padding-top: 20px;
+}
+
+.react-switch {
+    vertical-align: middle;
+    float: right;
+    margin: 20px
+}
+
+
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+@media (min-width: 950px) {
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .sub-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,8 @@
+.previousOrders {
+    width: 100%;
+    display: flex;
+}
+
+.previousOrdersContainer {
+    flex: 6;
+}

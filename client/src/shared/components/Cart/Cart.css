@@ -1,0 +1,15 @@
+.cartTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    color: black;
+    font-family: Poppins;
+    text-align: center;
+  }
+
+  .row-order {
+      border: 1px solid black;
+      padding: 10px;
+      background-color: #b7afaf;
+      border-radius: 20px;
+      margin-bottom: 10px;
+  }
