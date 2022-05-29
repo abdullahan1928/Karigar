@@ -7,6 +7,7 @@ import { validateContactForm } from '../../shared/utils/validators';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import contact from '../../images/customer.jpg';
+import Navbar from '../../shared/components/Navbar/Navbar';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ const Contact = () => {
 
   return (
     <>
-
+      <Navbar />
       <AuthBox img={contact} additionalImageStyles={{
         width: '700px'
       }}>

@@ -16,8 +16,8 @@
 }
 
 .row2-container:hover {
-    background-color: #cc7000;
-    color: white;
+    transform: scale(1.15);
+    box-shadow: 0 0 10px #cc7000;
 }
 
 .box {
@@ -29,7 +29,7 @@
 }
 
 .orange {
-    border-top: 3px solid var(--orange);
+    border-top: 5px solid var(--orange);
 }
 
 .sub-image {

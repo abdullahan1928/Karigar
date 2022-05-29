@@ -73,19 +73,16 @@ const SubServices = () => {
           {localStorage.setItem('subServices', cartItems[0])}
 
           <div >{cartItems.length !== 0 &&
-            <div className='btn proceed'>
-              <Link to="checkout">
+            <Link to="checkout">
+              <div className='btn proceed'>
                 <button
                   className='text proceed-btn'
-                // onClick={() => navigate('checkout', { state: { id: 7, color: 'green' } })}
                 >
                   Proceed to Order
                 </button>
-              </Link>
-            </div>
-
+              </div>
+            </Link>
           }</div>
-
 
         </div>
       </div>

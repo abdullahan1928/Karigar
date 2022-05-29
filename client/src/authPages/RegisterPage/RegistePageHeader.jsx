@@ -14,17 +14,15 @@ export default function RegisterHeader() {
       }}>
         Welcome to Karigaar!
       </Typography>
-      <CustomPrimaryButton
+      {/* <CustomPrimaryButton
         label='Sign up with google'
         additionalStyles={{
           marginTop: '1rem',
           marginLeft: '13rem',
           width: '200px',
           marginBottom: '2rem'
-
-
         }}
-      />
+      /> */}
     </>
   )
 }

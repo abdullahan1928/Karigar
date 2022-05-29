@@ -5,3 +5,18 @@
 .dashContainer {
     flex: 6;
 }
+
+.tittle {
+    color: #CA7D23;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.more {
+    color: #CA7D23;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}

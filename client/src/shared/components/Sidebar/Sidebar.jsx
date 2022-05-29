@@ -36,24 +36,20 @@ export const Sidebar = () => {
 
                     <hr />
                     <p className="title">SERVICES</p>
-                    <Link to="/dashboard/previousorders">
-                        <li className="icons-list-item">
-                            <FeaturedPlayListIcon className="icon" />
-                            <span className="dash-items-text">Previous Orders</span>
-                        </li>
-                    </Link>
                     <Link to="/dashboard/ordersinqueue">
                         <li className="icons-list-item">
                             <LocalShippingIcon className="icon" />
                             <span className="dash-items-text">Orders In Queue</span>
                         </li>
                     </Link>
+                    <Link to="/dashboard/previousorders">
+                        <li className="icons-list-item">
+                            <FeaturedPlayListIcon className="icon" />
+                            <span className="dash-items-text">Previous Orders</span>
+                        </li>
+                    </Link>
                     <hr />
                     <p className="title">USER</p>
-                    <li className="icons-list-item">
-                        <SettingsIcon className="icon" />
-                        <span className="dash-items-text">Settings</span>
-                    </li>
                     <Link to="/dashboard/profile">
                         <li className="icons-list-item">
                             <AccountCircleIcon className="icon" />
