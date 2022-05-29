@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { getActions } from '../../store/actions/authActions';
 import { useNavigate } from 'react-router-dom';
 import RegisterHeader from './RegistePageHeader';
+import Navbar from '../../shared/components/Navbar/Navbar';
 
 const RegisterPage = ({ register }) => {
   const navigate = useNavigate();
@@ -38,38 +39,41 @@ const RegisterPage = ({ register }) => {
 
   }
   return (
-    <AuthBox img={registerImage}
-      additionalImageStyles={{
-        width: '620px',
-        height: '500px',
-        marginTop: '6rem',
+    <>
+      <Navbar />
+      <AuthBox img={registerImage}
+        additionalImageStyles={{
+          width: '620px',
+          height: '500px',
+          marginTop: '6rem',
 
-      }}
-      additionalStyles={{
-        marginRight: '15rem',
-        marginTop: '2rem',
-      }}>
-      <RegisterHeader />
-      <RegisterPageInputs
-        name={name}
-        setName={setName}
+        }}
+        additionalStyles={{
+          marginRight: '15rem',
+          marginTop: '2rem',
+        }}>
+        <RegisterHeader />
+        <RegisterPageInputs
+          name={name}
+          setName={setName}
 
-        phone={phone}
-        setPhone={setPhone}
+          phone={phone}
+          setPhone={setPhone}
 
 
-        mail={mail}
-        setMail={setMail}
+          mail={mail}
+          setMail={setMail}
 
-        // username={username}
-        // setUsername={setUsername}
+          // username={username}
+          // setUsername={setUsername}
 
-        password={password}
-        setPassword={setPassword}
-      />
+          password={password}
+          setPassword={setPassword}
+        />
 
-      <RegisterPageFooter isFormValid={isFormValid} handleRegister={handleRegister} />
-    </AuthBox>
+        <RegisterPageFooter isFormValid={isFormValid} handleRegister={handleRegister} />
+      </AuthBox>
+    </>
   )
 }
 const mapActionsToProps = (dispatch) => {

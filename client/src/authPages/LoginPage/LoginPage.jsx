@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { getActions } from '../../store/actions/authActions';
 import { useNavigate } from 'react-router-dom';
 import loginImage from '../../images/login.png';
+import Navbar from '../../shared/components/Navbar/Navbar';
 /**
  * TODO
  * 
@@ -35,7 +36,7 @@ const LoginPage = ({ login }) => {
 
   return (
     <>
-
+      <Navbar />
       <AuthBox img={loginImage}>
         <LoginPageHeader />
         <LoginPageInputs mail={mail}

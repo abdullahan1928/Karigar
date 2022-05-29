@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.css';
+import Hunar from '../../../images/KarigarLogo.png'
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
@@ -7,6 +8,11 @@ const Navbar = (props) => {
     <nav className="navbar" style={props.additionalStyles ? props.additionalStyles : {}}>
       <div className="menu" style={props.additionalMenuStyles ? props.additionalMenuStyles : {}}>
         <div className="mainNav">
+          <Link to="/" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}>
+            <div className="Logo">
+              <img src={Hunar} alt="" className="log" style={props.additionalHoverStyles ? props.additionalHoverStyles : {}} />
+            </div>
+          </Link>
           <div className='nav-comp'>
             <Link to="/" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}>
               <p className='hoverText' style={props.additionalHoverStyles ? props.additionalHoverStyles : {}}>Home</p>
