@@ -7,19 +7,19 @@ import emptyCart from '../../../images/empty.png'
 export default function Cart({ cartItems }) {
     const [total, setTotal] = useState();
 
-    let [countItems, setCountItems] = useState(1);
+    // let [countItems, setCountItems] = useState(1);
 
-    console.log(countItems)
+    // console.log(countItems)
 
-    const increaseItems = () => {
-        countItems += 1
-        setCountItems(countItems);
-    }
+    // const increaseItems = () => {
+    //     countItems += 1
+    //     setCountItems(countItems);
+    // }
 
-    const decreaseItems = () => {
-        countItems -= 1
-        setCountItems(countItems);
-    }
+    // const decreaseItems = () => {
+    //     countItems -= 1
+    //     setCountItems(countItems);
+    // }
 
 
     return (
@@ -42,7 +42,7 @@ export default function Cart({ cartItems }) {
                             <div className="itemTitle">
                                 {item.title}
                             </div>
-                            <div class="counter">
+                            {/* <div class="counter">
                                 <button className="countBtn" onClick={decreaseItems}>
                                     -
                                 </button>
@@ -52,7 +52,7 @@ export default function Cart({ cartItems }) {
                                 <button className="countBtn" onClick={increaseItems}>
                                     +
                                 </button>
-                            </div>
+                            </div> */}
                             <span className="priceLabel">
                                 Price
                             </span>
