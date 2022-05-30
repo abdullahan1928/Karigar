@@ -4,15 +4,17 @@ const jwt = require('jsonwebtoken');
 const config = process.env;
 const verifyToken = (req, res, next) => {
   // fetching the token from possible means
-  let token = req.body.token || req.query.token || req.headers['authorization'];
+  let token = req.header('Authorization');
   if (!token) {
     return res.status(403).send("A token is required for authentication")
   }
   try {
     // removing the space after Bearer character and removing that
-    token = token.replace(/^Bearer\s+/, "");
+    // token = token.replace(/^Bearer\s+/, "");
+    // console.log(token);
     const decoded = jwt.verify(token, config.TOKEN_KEY);
     req.user = decoded;
+    // res.send(req.user);
     next();
 
 

@@ -17,8 +17,8 @@ let SubServic = [
         "subId": "101",
         "title": "AC General Service",
         "status": "Fixed price",
-        "price": "Rs. 1000",
-        "description": "AC Services which include AC reparing cleaning and much more",
+        "price": "Rs. 500",
+        "description": "Looking for a technician for general service or cleaning of your AC? Book your order now and get a technician.",
         "image": AC,
         "logo": ACbox
     },
@@ -28,7 +28,7 @@ let SubServic = [
         "title": "AC Installation",
         "status": "Fixed price",
         "price": "Rs. 1000",
-        "description": "Electrician Services include any kind of services related to Electricity",
+        "description": "Bought a new AC and looking for a technician to install it? Book your order now and get a technician.",
         "image": Electrician,
         "logo": electricianLogo
     },
@@ -38,7 +38,7 @@ let SubServic = [
         "title": "AC Reparairing",
         "status": "Fixed price",
         "price": "Rs. 1000",
-        "description": "Any Services related to Wood. Our top qualified Carpenters are available",
+        "description": "AC not working in these hot days? Don't worry, we're just one click away. Book your order now.",
         "image": Carpenter,
         "logo": CarpenterLogo
     },
@@ -48,7 +48,7 @@ let SubServic = [
         "title": "AC Mounting & Dismounting",
         "status": "Fixed price",
         "price": "Rs. 1000",
-        "description": "Any kind of taks related to plumbing will be done with full experty.",
+        "description": "Need to Dismount AC for a new installation? We can help you",
         "image": Plumber,
         "logo": plumberLogo
     },
@@ -57,8 +57,8 @@ let SubServic = [
         "subId": "105",
         "title": "AC Dismounting",
         "status": "Fixed price",
-        "price": "Rs. 1000",
-        "description": "If you are looking for one of the finest painter of the town",
+        "price": "Rs. 500",
+        "description": "Looking someone to dismount AC? Book your order now",
         "image": Painter,
         "logo": painterLogo
     },

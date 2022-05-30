@@ -3,6 +3,7 @@ const { validationResult } = require('express-validator');
 
 exports.orderNow = async (req, res) => {
     try {
+
         
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -15,7 +16,7 @@ exports.orderNow = async (req, res) => {
             // totalPrice: req.body.totalPrice, 
             instructions: req.body.instructions, 
             address: req.body.address,
-            // user: req.user.id
+            user: req.user.userId
         });
 
         res.send('Order stored successfully');

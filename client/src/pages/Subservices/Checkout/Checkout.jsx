@@ -8,6 +8,18 @@ import {useNavigate} from 'react-router-dom';
 import { CartCont } from '../../../Context/CartContext';
 
 export const Checkout = ({ }) => {
+    const userDetails = localStorage.getItem('user');
+    // const id = JSON.parse(userDetails).userId;
+    const userToken = JSON.parse(userDetails).token;
+
+
+    const authToken = axios.create({
+        baseURL: 'http://localhost:5002/api/order/',
+        
+        headers: {
+            Authorization: userToken
+        }
+    })    
 
 
     const navigate = useNavigate();
@@ -28,6 +40,7 @@ export const Checkout = ({ }) => {
 
     const handleInputsAddress = (e) => {
         setAddress(e.target.value);
+        console.log(userToken)
     }
 
     const handleInputsInstructions = (e) => {
@@ -40,11 +53,12 @@ export const Checkout = ({ }) => {
         e.preventDefault();
         try {
             setSubserviceId();
-            await axios.post("http://localhost:5002/api/order/checkout", {
+            await authToken.post("/checkout", {
                 address:address, instructions:instructions, subserviceId:subserviceId
             })
+            console.log(userToken);
             window.alert("Order Placed Successfully");
-            navigate('/service');
+            // navigate('/service');
 
 
             
