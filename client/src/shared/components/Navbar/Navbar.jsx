@@ -8,9 +8,9 @@ const Navbar = (props) => {
     <nav className="navbar" style={props.additionalStyles ? props.additionalStyles : {}}>
       <div className="menu" style={props.additionalMenuStyles ? props.additionalMenuStyles : {}}>
         <div className="mainNav">
-          <Link to="/" className='links' style={props.additionalLinkStyles ? props.additionalLinkStyles : {}}>
+          <Link to="/" className='links' style={props.additionalImgLinkStyles ? props.additionalImgLinkStyles : {}}>
             <div className="Logo">
-              <img src={Hunar} alt="" className="log" style={props.additionalHoverStyles ? props.additionalHoverStyles : {}} />
+              <img src={Hunar} alt="" className="log" style={props.additionalImgStyles ? props.additionalImgStyles : {}} />
             </div>
           </Link>
           <div className='nav-comp'>

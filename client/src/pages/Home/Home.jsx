@@ -27,6 +27,7 @@ function Dashboard() {
           <Navbar
             additionalHoverStylesOnLogin={{ display: 'none' }}
             additionalCSSStylesOnLogin={{ border: 'none' }}
+            additionalImgLinkStyles={{ display: 'none' }}
           />
           <img src={logo} alt="Logo Picture" className='imageContainer' />
         </div>

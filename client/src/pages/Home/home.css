@@ -14,13 +14,11 @@
 }
 
 .rectangleDesign {
-  /* position:relative; */
   position: absolute;
   width: 520px;
   height: 700px;
   float: right;
   background: linear-gradient(147.34deg, #CA7D23 0%, #D6715B 43.79%);
-  /*  */
   margin-left: 919px;
   -webkit-border-top-left-radius: 50px;
   -webkit-border-bottom-right-radius: 18px;
@@ -31,8 +29,6 @@
   border-top-left-radius: 50px;
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 50px;
-  /* transform: rotate(10.11deg); */
-
 }
 
 .imageContainer {
@@ -40,7 +36,6 @@
   margin-top: 7rem;
   margin-left: 3rem;
   width: 400px;
-
   height: 482px;
 }
 
@@ -62,12 +57,8 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
-
   font-size: 24px;
-  /* line-height: 56px; */
-
   color: #6A6A6A;
-
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: -.5rem;
 }
@@ -92,23 +83,15 @@
   line-height: 45px;
   display: flex;
   width: 580px;
-  /* background-color: yellow; */
   margin-left: -10rem;
   margin-top: .5rem;
-  /* or 196% */
-
-
   color: #000000;
 }
 
 .text {
-  /* font-family: 'Roboto'; */
-  /* font-style: normal; */
   font-weight: 520;
   font-size: 20px;
-  /* line-height: 35px; */
   color: white;
-
 }
 
 .btn {
