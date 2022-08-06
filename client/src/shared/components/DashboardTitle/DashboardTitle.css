@@ -1,0 +1,13 @@
+.dash-top {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px #CA7D23;
+    padding: 10px;
+    margin: 20px;
+}
+
+.dash-title {
+    color: #CA7D23;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}

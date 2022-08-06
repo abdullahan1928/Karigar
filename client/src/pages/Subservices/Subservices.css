@@ -1,0 +1,92 @@
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+.subServiceSection {
+  margin-top: 2rem;
+  height: 100vh;
+  scroll-behavior: smooth;
+  width: auto;
+
+
+  width: 75%;
+  height: 100vh;
+  float: left;
+  flex: 2;
+  scroll-snap-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.subServiceTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: black;
+  font-family: Poppins;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.subServiceDescription {
+  color: black;
+  font-family: Poppins;
+  margin-left: 4rem;
+  text-align: center;
+}
+
+.line-6 {
+  height: 3px;
+  width: 6rem;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  margin-left: 45rem;
+  background: linear-gradient(to bottom,
+      transparent 2px,
+      black 2px,
+      black 3px,
+      transparent 3px);
+}
+
+.sub-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  margin: 5px 15px 5px 5px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.cart-btn-container {
+  margin-left: 82rem;
+
+  top: 0;
+  margin-top: 5rem;
+  bottom: 0;
+  position: fixed;
+
+}
+
+.cartSection {
+  float: right;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px #CA7D23;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  top: 0;
+  width: 350px;
+  height: 600px;
+}
+
+.proceed {
+  text-align: center;
+  border: none;
+  width: 350px;
+  top: 0px;
+  margin-left: 0.2rem;
+  margin-top: 10px;
+}
